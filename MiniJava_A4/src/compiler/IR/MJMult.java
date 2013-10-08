@@ -7,12 +7,14 @@ import compiler.Exceptions.CodeGenException;
 import compiler.Exceptions.TypeCheckerException;
 
 public class MJMult extends MJBinaryOp {
-
-	public MJMult(MJExpression lhs, MJExpression rhs) {
-		super(lhs, rhs);
+	public MJMult(MJExpression a, MJExpression b) {
+		super(a, b);
 	}
 
 	public void prettyPrint(PrettyPrinter prepri) {
+		this.lhs.prettyPrint(prepri);
+		prepri.print(" * ");
+		this.rhs.prettyPrint(prepri);
 	}
 
 }

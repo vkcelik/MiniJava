@@ -11,7 +11,17 @@ import compiler.Exceptions.TypeCheckerException;
 
 public class MJNew extends MJExpression {
 
+	public MJNew(String string) {
+		this.type = MJType.getClassType(string);
+	}
+
 	public void prettyPrint(PrettyPrinter prepri) {
+		prepri.print("new ");
+		prepri.print(this.type.getName());
+
+		prepri.print("(");
+		prepri.print(")");
+
 	}
 
 }

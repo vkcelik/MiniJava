@@ -7,10 +7,14 @@ import compiler.Exceptions.CodeGenException;
 import compiler.Exceptions.TypeCheckerException;
 
 public class MJLess extends MJBinaryOp {
-	
-	private MJExpression 
 
-	public void prettyPrint(PrettyPrinter prepri) {
+	public MJLess(MJExpression a, MJExpression b) {
+		super(a, b);
 	}
 
+	public void prettyPrint(PrettyPrinter prepri) {
+		this.lhs.prettyPrint(prepri);
+		prepri.print("<");
+		this.rhs.prettyPrint(prepri);
+	}
 }

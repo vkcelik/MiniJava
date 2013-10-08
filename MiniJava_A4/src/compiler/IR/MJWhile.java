@@ -3,24 +3,24 @@ package compiler.IR;
 import compiler.PrettyPrinter;
 
 public class MJWhile extends MJStatement {
-	
-	private MJExpression whileCondition;
-	private MJStatement whileStatement;
-	
-	public MJWhile(MJExpression whileCondition, MJStatement whileStatement) {
-		this.whileCondition = whileCondition;
-		this.whileStatement = whileStatement;
-	}
+	private MJExpression expression;
+	private MJStatement statement;
 
-	public MJExpression getWhileCondition() {
-		return whileCondition;
-	}
+	public MJWhile(MJExpression expression, MJStatement statement) {
+		this.expression = expression;
+		this.statement = statement;
 
-	public MJStatement getWhileStatement() {
-		return whileStatement;
 	}
 
 	public void prettyPrint(PrettyPrinter prepri) {
+		prepri.print("while ");
+		prepri.print("(");
+
+		this.expression.prettyPrint(prepri);
+
+		prepri.print(")");
+		this.statement.prettyPrint(prepri);
+
 	}
-	
+
 }
