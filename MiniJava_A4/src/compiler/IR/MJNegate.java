@@ -13,6 +13,8 @@ public class MJNegate extends MJUnaryOp {
 	}
 
 	public void prettyPrint(PrettyPrinter prepri) {
+		prepri.print("!");
+		this.arg.prettyPrint(prepri);
 	}
 
 }
