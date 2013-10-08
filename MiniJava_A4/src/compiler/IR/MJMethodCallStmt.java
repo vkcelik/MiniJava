@@ -12,6 +12,14 @@ import compiler.Exceptions.TypeCheckerException;
 import compiler.Exceptions.VariableNotFound;
 
 public class MJMethodCallStmt extends MJStatement {
+	
+	MJIdentifier id;
+	LinkedList<MJExpression> parameters;
+	
+	public MJMethodCallStmt(MJIdentifier id, LinkedList<MJExpression> parameters){
+		this.id=id;
+		this.parameters = parameters;
+	}
 
 	public void prettyPrint(PrettyPrinter prepri) {
 	}

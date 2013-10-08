@@ -12,6 +12,15 @@ import compiler.Exceptions.TypeCheckerException;
 import compiler.Exceptions.VariableNotFound;
 
 public class MJMethodCallExpr extends MJExpression {
+	 
+	MJIdentifier id;
+	LinkedList<MJExpression> parameters;
+	
+	public MJMethodCallExpr(MJIdentifier id, LinkedList<MJExpression> parameters){
+		this.id=id;
+		this.parameters = parameters;
+		this.type = id.getType();
+	}
 
 	public void prettyPrint(PrettyPrinter prepri) {
 	}
