@@ -19,11 +19,9 @@ public class MJNewArray extends MJNew {
 	public void prettyPrint(PrettyPrinter prepri) {
 		prepri.print("new ");
 		prepri.print(this.type.getName());
-
 		prepri.print("[");
 		this.expression.prettyPrint(prepri);
-		prepri.print("]");
-
+		prepri.println("];");
 	}
 
 }

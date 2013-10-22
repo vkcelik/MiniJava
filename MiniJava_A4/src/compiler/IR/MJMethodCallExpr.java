@@ -23,6 +23,14 @@ public class MJMethodCallExpr extends MJExpression {
 	}
 
 	public void prettyPrint(PrettyPrinter prepri) {
+		this.id.prettyPrint(prepri);
+		prepri.print("(");
+		for (int i=0; i<this.parameters.size(); i++){
+			this.parameters.get(i).prettyPrint(prepri);
+			if (i < this.parameters.size()-1){
+				prepri.print(", ");
+			}
+		}
+		prepri.print(")");
 	}
-
 }

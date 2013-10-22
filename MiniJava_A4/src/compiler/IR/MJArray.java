@@ -27,7 +27,7 @@ public class MJArray extends MJIdentifier {
 		this.array.prettyPrint(prepri);
 		prepri.print("[");
 		this.index.prettyPrint(prepri);
-		prepri.print("]");
+		prepri.println("];");
 	}
 	
 }

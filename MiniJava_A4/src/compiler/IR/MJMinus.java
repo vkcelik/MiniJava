@@ -17,6 +17,7 @@ public class MJMinus extends MJBinaryOp {
 		this.lhs.prettyPrint(prepri);
 		prepri.print(" - ");
 		this.rhs.prettyPrint(prepri);
+		prepri.println(";");
 	}
 
 }

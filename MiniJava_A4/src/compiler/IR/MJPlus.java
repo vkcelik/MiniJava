@@ -14,9 +14,10 @@ public class MJPlus extends MJBinaryOp {
 	}
 
 	public void prettyPrint(PrettyPrinter prepri) {
-		super.lhs.prettyPrint(prepri);
+		this.lhs.prettyPrint(prepri);
 		prepri.print(" + ");
-		super.rhs.prettyPrint(prepri);
+		this.rhs.prettyPrint(prepri);
+		prepri.println(";");
 	}
 
 }
